@@ -27,7 +27,7 @@ function PieChart (props) {
 	}
 
 	return (
-        <div>
+        <div className="my-3 p-3 shadow">
             <h2 className='text-center my-3'>{title}</h2>
             <p className='text-center mt-5'>{date}</p>
 			<CanvasJSChart options = {options}/>
