@@ -34,14 +34,15 @@ function DailyChart (props) {
               showInLegend: true,
               xValueFormatString: "dd/mm/yyyy", //it doesn't matter when they are not capital letters
               dataPoints: totalDeaths,
-              color:'#d63447'
+              color:'#f64b3c'
           },
           {
               type: "stackedArea",
               name: "Confirmed",
               showInLegend: true,
               xValueFormatString: "DD/MM/YYYY",
-              dataPoints: totalConfirmed
+              dataPoints: totalConfirmed,
+              color:'#30475e'
           }
       ]
   }

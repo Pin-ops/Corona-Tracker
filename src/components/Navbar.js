@@ -11,7 +11,7 @@ function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Link href="/">HOME</Nav.Link>
-                    <Nav.Link href="/search">SEARCH</Nav.Link>
+                    <Nav.Link href="/search">SEARCH BY COUNTRY</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -22,7 +22,8 @@ class Home extends Component {
     }
 
     componentDidMount () {
-        axios
+        const getData = () =>{
+            axios
             .get('https://covid19.mathdro.id/api')
             .then( res => res.data)
             .then( data => {
@@ -35,7 +36,20 @@ class Home extends Component {
                                 })
                                 console.log('this state :',this.state)
             })
+        }
+
+        getData();
+
+        this.interval = setInterval(()=>{
+            console.log('setInterval works again');
+            getData();
+        },10000)
     }
+
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
+
 
     seeDailyReport = () =>{
         this.setState({
@@ -86,11 +100,11 @@ class Home extends Component {
 
         const pieChartData = [
                                 { y: confirmed,
-                                  label:'Confirmed',color:'#30475e'},
+                                  label:'Confirmed',color:'#4F81BC'},
                                 { y: recovered,
-                                  label:'Recovered', color:'#216353'},
+                                  label:'Recovered', color:'#9BBB58'},
                                 { y: deaths,
-                                  label:'Deaths',color:'#d63447'}
+                                  label:'Deaths',color:'#C0504E'}
         ]
 
 
